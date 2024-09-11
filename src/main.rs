@@ -25,7 +25,7 @@ fn run(mut terminal: DefaultTerminal) -> io::Result<()> {
         })?;
 
         if let event::Event::Key(key) = event::read()? {
-            if key.kind == KeyEventKind::Press && key.code == KeyCode::Char('q') {
+            if key.kind == KeyEventKind::Press && key.code == KeyCode::Char('q') || key.code == KeyCode::Char('Q') {
                 return Ok(());
             }
         }
